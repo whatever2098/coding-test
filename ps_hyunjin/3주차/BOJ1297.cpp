@@ -10,6 +10,6 @@ int main() {
 	int D, H, W;
 	cin >> D >> H >> W;
 
-	double a = sqrt((double)(D * D) / (H * H + W * W));
+	double a = sqrt((double)(D * D) / (H * H + W * W));  //int / int 결과는 int로 저장되므로 double / int가 되도록 캐스팅
 	cout << (int)(H * a) << " " << (int)(W * a) << "\n";
 }
