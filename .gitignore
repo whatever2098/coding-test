@@ -176,3 +176,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+#executing
+2024/.vs/
+2024/Debug/
+2024/x64/
+2024/*.sln
