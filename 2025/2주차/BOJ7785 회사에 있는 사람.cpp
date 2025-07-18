@@ -28,9 +28,10 @@ int main(){
     vector<string> ans;
     ans.reserve(um.size());  //reserve 성능 개선용(많은 할당, 복사 없어짐)
     for (auto& [name, here] : um) {
-        if (here) 
+        if (here)                // 이 조건을 통과해야만 ans에 추가
             ans.push_back(name);
     }
+    // Baha는 here가 false이므로 ans에 들어가지 않음
 
     // 사전 내림차순으로 정렬
     sort(ans.begin(), ans.end(), greater<string>());
