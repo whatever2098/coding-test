@@ -1,6 +1,6 @@
 '''666으로 끝나는 숫자들, 앞뒤에 들어가는 숫자들, 666으로 시작하는 숫자들'''
 
-import sys
+'''import sys
 import itertools
 
 def find_nth_movie(n):
@@ -11,7 +11,7 @@ def find_nth_movie(n):
 
 if __name__ == "__main__":
     n = int(sys.stdin.readline())
-    print(find_nth_movie(n))
+    print(find_nth_movie(n))'''
     
 '''itertools.count(666)
 무한히 666, 667, 668, … 을 생성하는 이터레이터를 만듭니다.
@@ -27,8 +27,8 @@ next(...)
 '''
 
 
-
-'''전체 흐름
+'''
+전체 흐름
 
 1부터 차례로 num을 늘려 가며 "666" 포함 여부를 보고,
 
@@ -36,7 +36,7 @@ next(...)
 
 count가 입력 n과 같아지는 순간 num을 프린트하고 함수를 종료합니다.'''
 
-'''import sys
+import sys
 
 def main():
     n = int(sys.stdin.readline())
@@ -53,4 +53,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''
