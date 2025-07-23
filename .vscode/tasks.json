@@ -1,0 +1,23 @@
+// .vscode/tasks.json
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "g++ build active file",     // ⚠️ 이 라벨이 launch.json과 정확히 일치해야 합니다.
+		"type": "shell",
+		"command": "g++",
+		"args": [
+		  "-std=c++17",
+		  "${file}",
+		  "-o",
+		  "${fileDirname}/${fileBasenameNoExtension}"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"problemMatcher": ["$gcc"]
+	  }
+	]
+  }
+  
