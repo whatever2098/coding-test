@@ -14,7 +14,6 @@ bool compare(const pair<int, string>& a, const pair<int, string>& b){
     }
 }
 
-
 int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
