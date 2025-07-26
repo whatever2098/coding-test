@@ -9,10 +9,11 @@ vector<pair<int, string>> v;
 
 bool compare(const pair<int, string>& a, const pair<int, string>& b){
     if (a.first != b.first){
-        return a.first < b.first;
-    return a.second < b.second;
+        return a.first < b.first;         // 길이가 다르면, 길이가 짧은 게 먼저
+    } else {
+    return a.second < b.second;          // 길이가 같으면, 알파벳순 비교
+        }
     }
-}
 
 int main(){
     ios_base::sync_with_stdio(0);
@@ -49,7 +50,7 @@ for (const auto& p : v) {
 // 원본 v를 교체
 v = move(uniq);
  for (const auto& e : v) {
-     cout << e.second << "\n;
+     cout << e.second << "\n";
  }
 
 }
