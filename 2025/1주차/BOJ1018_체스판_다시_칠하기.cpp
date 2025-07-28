@@ -3,6 +3,7 @@ using namespace std;
 
 bool board[51][51];
 
+//현재 위치 (x, y)를 시작으로 8행을 검사 (8×8 블록)
 int cntRectoClr(int x, int y) {
 	/*8*8 보드의 시작점 (x, y)가 주어졌을 때
 	시작점을 검은색으로 칠했을 때 칠해야 할 정사각형의 개수 bcnt와
@@ -22,11 +23,11 @@ int cntRectoClr(int x, int y) {
 			}
 		}
 	}*/
-	bool isitRight{ true }; //black부터 시작
+	bool isitRight{ true }; //black부터 시작  칠하기여서 blackdmd 을 true로 설정
 	for (int i{ x }; i < x + 8; i++) {
 		for (int j{ y }; j < y + 8; j++) {
-			if(board[i][j] != isitRight) bcnt++;
-			isitRight = !isitRight; 
+			if(board[i][j] != isitRight) bcnt++;   //black으로 시작하는 체스판을 만들고 싶은 것.
+			isitRight = !isitRight;              //board[i][j]가 기대한 색(isitRight)과 다르면 칠해야 하므로 bcnt++.
 		}
 		isitRight = !isitRight;  //줄이 넘어가면 다른 색으로 시작
 	}

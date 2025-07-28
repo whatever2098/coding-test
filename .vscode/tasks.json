@@ -3,14 +3,14 @@
 	"version": "2.0.0",
 	"tasks": [
 	  {
-		"label": "g++ build active file",     // ⚠️ 이 라벨이 launch.json과 정확히 일치해야 합니다.
+		"label": "build with g++",
 		"type": "shell",
 		"command": "g++",
 		"args": [
-		  "-std=c++17",
-		  "${file}",
-		  "-o",
-		  "${fileDirname}/${fileBasenameNoExtension}"
+		  "-g",                // 디버깅 정보 포함
+		  "-std=c++17",        // C++ 표준
+		  "main.cpp",          // 컴파일 대상
+		  "-o", "a.out"        // 출력 파일명
 		],
 		"group": {
 		  "kind": "build",
@@ -20,4 +20,5 @@
 	  }
 	]
   }
+  
   
