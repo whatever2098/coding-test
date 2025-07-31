@@ -17,14 +17,17 @@ public:
     Queue() : frontNode(nullptr), backNode(nullptr), count(0) {}
 
     ~Queue() {
-        while (!empty()) {
-            pop();
+        Node* current = frontNode;
+        while (current != nullptr) {
+            Node* temp = current;
+            current = current->next;
+            delete temp;
         }
     }
 
     void push(int x) {
         Node* newNode = new Node(x);
-        if (empty()) {
+        if (frontNode == nullptr) {
             frontNode = backNode = newNode;
         } else {
             backNode->next = newNode;
@@ -34,37 +37,20 @@ public:
     }
 
     int pop() {
-        if (empty()) return -1;
-
+        if (frontNode == nullptr) return -1;
         int ret = frontNode->data;
         Node* temp = frontNode;
         frontNode = frontNode->next;
         delete temp;
         count--;
-
-        if (frontNode == nullptr) {
-            backNode = nullptr;
-        }
+        if (frontNode == nullptr) backNode = nullptr;
         return ret;
     }
 
-    int size() {
-        return count;
-    }
-
-    int empty() {
-        return count == 0 ? 1 : 0;
-    }
-
-    int front() {
-        if (empty()) return -1;
-        return frontNode->data;
-    }
-
-    int back() {
-        if (empty()) return -1;
-        return backNode->data;
-    }
+    int size() { return count; }
+    int empty() { return frontNode == nullptr ? 1 : 0; }
+    int front() { return frontNode == nullptr ? -1 : frontNode->data; }
+    int back() { return backNode == nullptr ? -1 : backNode->data; }
 };
 
 int main() {
