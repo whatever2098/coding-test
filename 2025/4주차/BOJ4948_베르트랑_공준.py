@@ -18,3 +18,5 @@ while True:
     # num+1부터 2*num까지 소수 개수 세기
     count = sum(1 for i in range(num + 1, 2 * num + 1) if is_prime[i])
     print(count)
+
+# 19줄: count에는 num < x ≤ 2n 범위의 소수 개수가 저장된다.
