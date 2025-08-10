@@ -16,7 +16,8 @@ while True:
     if num == 0:
         break
     # num+1부터 2*num까지 소수 개수 세기
-    count = sum(1 for i in range(num + 1, 2 * num + 1) if is_prime[i])
+    count = sum(1 for i in range(num + 1, 2 * num + 1) if is_prime[i])     #1 for i in ... if ...제너레이터 표현식입니다.위 필터를 통과한 i마다 숫자 1을 “생산”합니다. (True일 때만 1을 내보내고, False면 아무것도 안 내보냄)
     print(count)
 
+#위 필터를 통과한 i마다 숫자 1을 “생산”합니다. (True일 때만 1을 내보내고, False면 아무것도 안 내보냄)
 # 19줄: count에는 num < x ≤ 2n 범위의 소수 개수가 저장된다.
