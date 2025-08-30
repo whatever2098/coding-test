@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-dancing = {"ChongChong" } #총총이는 처음부터 춤춤.
+dancing = {"ChongChong" } #총총이는 처음부터 춤춤.중괄호가 set.
 
 
 for _ in range(n):
