@@ -26,33 +26,19 @@ print(ans)                          # 최종적으로 그룹 단어의 개수 �
 
 
 
-# import sys
-# input = sys.stdin.readline
-
-# def is_group(word: str) -> bool:
-#     seen = set()
-#     prev = None
-#     for ch in word.strip():
-#         if ch != prev:
-#             if ch in seen:
-#                 return False
-#             seen.add(ch)
-#             prev = ch
-#     return True
 
 
 
-import sys
-input = sys.stdin.readline
 
-def is_group(s):
-    seen, prev = set(), None
-    for c in s.strip():
-        if c != prev and c in seen:   # 블록이 바뀌는데 과거에 나온 문자면 탈락
-            return False
-        seen.add(c)
-        prev = c
-    return True
 
-n = int(input().strip())
-print(sum(is_group(input()) for _ in range(n)))
+# 언제 뭘 쓰나? strip() / split()
+
+# 입력 한 줄을 숫자/단어로 분리: input().split()
+
+# 줄 끝 개행·공백만 제거: input().strip()
+
+# 둘 다 필요(토큰화 전에 라인 정리): input().strip().split()
+
+# CSV처럼 구분자 명확: line.split(',')
+
+# 요약: 양끝 정리 = strip(), 토큰화 = split().
