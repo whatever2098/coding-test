@@ -7,7 +7,8 @@
         "iostream": "cpp",
         "utility": "cpp",
         "xiosbase": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "ios": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "python-envs.defaultEnvManager": "ms-python.python:system",

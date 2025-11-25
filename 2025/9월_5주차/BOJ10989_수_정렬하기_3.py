@@ -1,8 +1,8 @@
 import sys
 from array import array
 
-input = sys.stdin.readline
-write = sys.stdout.write
+data = sys.stdin.buffer
+write = sys.stdout.buffer.write
 
 N = int(data.readline())
 
