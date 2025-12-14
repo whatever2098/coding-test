@@ -34,18 +34,18 @@ public:
 		return tail->val; }
 
 	int pop_front() {
-		//µ¦ ³»ºÎ¿¡ °ªÀÌ Á¸ÀçÇÏ¸é,
+		//ë± ë‚´ë¶€ì— ê°’ì´ ì¡´ì¬í•˜ë©´,
 		if (empty()) { return -1; }
-		//º¯¼ö¿¡ ÀÓ½Ã·Î head¸¦ º¹»çÇÔ.
+		//ë³€ìˆ˜ì— ì„ì‹œë¡œ headë¥¼ ë³µì‚¬í•¨.
 		Node* t = head;
-		//¿ª½Ã ÀÓ½Ã·Î headÀÇ value¸¦ º¹»çÇÔ.
+		//ì—­ì‹œ ì„ì‹œë¡œ headì˜ valueë¥¼ ë³µì‚¬í•¨.
 		int v = t->val;
-		//´ÙÀ½ ³ëµå°¡ Çìµå°¡ µÊ.
+		//ë‹¤ìŒ ë…¸ë“œê°€ í—¤ë“œê°€ ë¨.
 		head = head->next;
-		//¿¬°á ¾÷µ¥ÀÌÆ®
+		//ì—°ê²° ì—…ë°ì´íŠ¸
 		if (head) { head->prev = nullptr; }
 		else { tail = nullptr; }
-		//ÀÓ½Ã tailÀ» Áö¿î´Ù.
+		//ì„ì‹œ tailì„ ì§€ìš´ë‹¤.
 		delete t;
 		--cnt;
 		return v;
