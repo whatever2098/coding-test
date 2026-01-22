@@ -24,8 +24,9 @@ BOJ1015_수열_정렬 & codetree_정렬_정렬된 수 위치
 
 ---
 
+## 풀이 아이디어
 <details>
-<summary>풀이 아이디어 자세히 보기</summary>
+<summary>문제 설명 펼치기</summary>
 
 - (값, 원래 인덱스) 형태로 저장
 - 값 기준으로 정렬
@@ -38,14 +39,19 @@ P[original_idx] = sorted_pos + 1;
 B[P[i]] = A[i] 조건을 만족한다.
 </details>
 
-<details><summary>실수하기 쉬운 포인트</summary>
+---
+## 실수하기 쉬운 포인트
+<details>
+  <summary>아이디어 보기</summary>
   
 - 출력이 **1-based인지 0-based인지** 반드시 예제로 확인
 - P 벡터는 반드시 N 크기로 미리 생성
   
 </details>
 
-<details><summary>시간 복잡도</summary>
+---
+## 시간 복잡도
+<details><summary>빅오</summary>
   
 - 정렬: O(N log N)
 - 매핑 및 출력: O(N)
@@ -53,11 +59,14 @@ B[P[i]] = A[i] 조건을 만족한다.
   
 </details>
 
-<details><summary>C++ 코드</summary>
+---
+## C++ 코드
+<details><summary>코드 링크</summary>
   
 [전체 코드](2026/1월_3주차/codetree_정렬_정렬된_수_위치_알아내기.cpp)
 
 </details>
+
 
 
 
