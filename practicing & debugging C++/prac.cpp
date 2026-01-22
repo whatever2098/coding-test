@@ -2,31 +2,34 @@
 #include <algorithm>
 #include <utility>
 #include <vector>
-#include <string>
+#define value first
+#define idx second
 using namespace std;
 
-bool cmp(const pair<int, int>& a, const pair<int, int>& b) {
-	if (a.second != b.second) {
-		return a.second < b.second;
-	}
-	return a.first < b.first;
-}
-	int main() {
+int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	vector<pair<int, int>> v;  //<index, value>
+	vector<pair<int, int>> v;
 	int N;
 	cin >> N;
 	for (int i{ 0 }; i < N; i++) {
-		int num;
-		cin >> num;
-		v.push_back({ i, num });
+		int val;
+		cin >> val;
+		v.push_back({ val, i });
 	}
 
-	sort(v.begin(), v.end(), cmp);
+	sort(v.begin(), v.end(), [](const pair<int, int>& a, const pair<int, int>& b) {
+		if (a.value != b.value) return a.value < b.value;
+		return a.idx < b.idx;
+		});
+
+	for (int sorted_idx{ 0 }; sorted_idx < N; sorted_idx++) {
+		int original_idx = v[sorted_idx].idx;
+		v[original_idx].idx = sorted_idx;
+	}
 
 	for (auto e : v) {
-		cout << e.first << " ";
+		cout << e.value << " ";
 	}
 }
