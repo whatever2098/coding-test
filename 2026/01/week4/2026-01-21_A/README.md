@@ -15,7 +15,7 @@
 
 - A[P[i]] = B[i]
 </details>
----
+
 
 ## 핵심 아이디어
 <details>
@@ -37,6 +37,6 @@ P[original_index] = sorted_position;
 2️⃣ value 같으면 original_index 오름차순
 ```
 </details>
----
+
 
 ## 구현 흐름
