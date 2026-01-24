@@ -53,6 +53,6 @@ B[P[i]] = A[i] 조건을 만족한다.
 ## C++ 코드
 <details><summary>코드 링크</summary>
   
-[전체 코드](2026/1월_3주차/codetree_정렬_정렬된_수_위치_알아내기.cpp)
+[전체 코드](codetree_정렬_정렬된_수_위치_알아내기.cpp)
 
 </details>
