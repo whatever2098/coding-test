@@ -111,5 +111,5 @@ for (int sorted_pos = 0; sorted_pos < N; sorted_pos++)
 
 <details>
   <summary>코드 링크</summary>
-  [전체 코드]()
+  [전체 코드](BOJ1015_수열_정렬.cpp)
 </details>
