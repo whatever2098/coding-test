@@ -21,5 +21,5 @@ int main() {
 	}
 	cnt += (n - m);
 
-	cout << cnt;
+	cout << cnt << "\n";
 }
