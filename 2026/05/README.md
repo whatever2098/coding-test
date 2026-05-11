@@ -4,7 +4,8 @@
 | 상위 카테고리  | 포함 문제                                  |
 | -------- | -------------------------------------- |
 | 구현/시뮬레이션 | [codeforces 520B](week1/2026-05-02_A)    |
-| 그래프(BFS) | [게임 맵 최단거리](week2/2026-05-04_A), [leet 200 number of islands](week2/2026-05-05_A)        |
+| 그래프(BFS) | [게임 맵 최단거리](week2/2026-05-04_A), [leet 200 number of islands](week2/2026-05-05_A), [leet 695 max area of island](week2/2026-05-06_A)      |
+|             | [codetree 빙빙 돌며 숫자 사각형 채우기](week2/2026-05-08_A), [codetree 되돌아오기](week2/2026-05-08_B), [leetcode 994 Rotting Oranges](week2/2026-05-09_B)
 
 ## 🧩 Problems
 | 상위 카테고리  | 포함 문제                                  |
